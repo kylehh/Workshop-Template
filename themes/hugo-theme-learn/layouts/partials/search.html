@@ -11,6 +11,7 @@
         var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
     {{ else }}
         var baseurl = "{{.Site.BaseURL}}";
+        var baseUriFull='{{ trim .Site.BaseURL "/" | safeJS }}/';
     {{ end }}
 </script>
 <script type="text/javascript" src="{{"js/search.js" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
